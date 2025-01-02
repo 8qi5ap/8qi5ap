@@ -1,12 +1,12 @@
 from guizero import *
 from random import *
 
-names = ["pho","bun bo","com tam","chan ga sot thai","bò wagu","banh kem","ba chỉ","cainit"]
-
+images = ["pho.png","bun_bo.png","com_tam.png","chan_ga.png","wagu.png","banh_kem.png","thit_ba_chi.png","cainit.png"]
+name = ["pho","bun bo","com tam","chan ga sot thai giam","wagu.png","banh kem","thit ba chi","co cai nit :>"]
 
 def choose_food():
-    name = choice(names)
-    name_text.value = name 
+    image = choice(images)
+    image_image.value = image
 
 app=App("menu", bg="white")
 
@@ -14,7 +14,6 @@ title=Text(app,"nhấn vào để random food")
 button=PushButton(app,command=choose_food,text="bắt đầu gacha")
 button.bg= "white"
 button.text_size=20
-name_text=Text(app,text="")
-app.display()
+image_image=Picture(app,image="")
 
-# EM CHƯA THÊM HÌNH VÀO ĐC
+app.display()
